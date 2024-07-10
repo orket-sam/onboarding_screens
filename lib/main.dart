@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:onboarding_app/increasing_text.dart';
 import 'package:onboarding_app/indicator_widget.dart';
 import 'package:onboarding_app/onboarding_provider.dart';
 import 'package:provider/provider.dart';
@@ -84,7 +86,11 @@ class OnBoardingScreen extends StatelessWidget {
                 ),
                 const Spacer(),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(CupertinoPageRoute(
+                        builder: (context) =>
+                            const IncreasingText(value: 200000)));
+                  },
                   child: const Text('Skip'),
                 )
               ],
